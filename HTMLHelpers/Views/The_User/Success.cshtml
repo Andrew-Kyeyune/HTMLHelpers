@@ -1,0 +1,17 @@
+﻿@model HTMLHelpers.Models.User
+
+@{
+    ViewBag.Title = "Form Submitted";
+}
+
+<h2>Form Submitted Successfully</h2>
+
+<p><strong>Full Name:</strong> @Model.Name</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Password:</strong> (Hidden)</p>
+<p><strong>Gender:</strong> @Model.Gender</p>
+<p><strong>Subscribed:</strong> @(Model.Issubscribed ? "Yes" : "No")</p>
+<p><strong>Country:</strong> @Model.Country</p>
+<p><strong>Skills:</strong> @string.Join(", ", Model.Skills != null ? Model.Skills : new string[] { })</p>
+
+
